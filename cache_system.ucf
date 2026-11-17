@@ -1,0 +1,20 @@
+# Clock: 50 MHz oscillator
+NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33;
+NET "clk" TNM_NET = "clk";
+TIMESPEC "TS_clk" = PERIOD "clk" 20 ns HIGH 50%;
+
+# Reset: BTN_SOUTH
+NET "rst" LOC = "K17" | IOSTANDARD = LVCMOS33 | PULLDOWN;
+
+# Trigger: BTN_EAST
+NET "trig" LOC = "H13" | IOSTANDARD = LVCMOS33 | PULLDOWN;
+
+# cpu_din(7 downto 0): LED7 .. LED0
+NET "cpu_din<0>" LOC = "F12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<1>" LOC = "E12" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<2>" LOC = "E11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<3>" LOC = "F11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<4>" LOC = "C11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<5>" LOC = "D11" | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<6>" LOC = "E9"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
+NET "cpu_din<7>" LOC = "F9"  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = SLOW;
